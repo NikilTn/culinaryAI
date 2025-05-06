@@ -1,0 +1,300 @@
+/* Base styles for the authentication page */
+body {
+  position: relative;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.auth-container {
+  max-width: 450px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  animation: slideUpFade 0.6s ease-out;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #FF5722, #F44336, #9C27B0);
+}
+
+.login-form, .signup-form {
+  animation: fadeIn 0.5s ease-out;
+  position: relative;
+}
+
+.login-form::after, .signup-form::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/5787/5787016.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.login-form h2, .signup-form h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2:after, .signup-form h2:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #FF5722, #F44336, #9C27B0);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: expandWidth 0.5s 0.3s forwards;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.form-group label {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.form-group input {
+  padding: 0.9rem;
+  border: 2px solid #eaeaea;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form-group input:focus {
+  border-color: #FF5722;
+  box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.1);
+  outline: none;
+  background-color: white;
+}
+
+.form-group:focus-within label {
+  color: #FF5722;
+}
+
+.button-icon {
+  margin-left: 8px;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+button[type="submit"]:hover .button-icon {
+  transform: translateX(5px);
+}
+
+button[type="submit"] {
+  padding: 1rem;
+  background: linear-gradient(90deg, #FF5722, #F44336, #9C27B0);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+button[type="submit"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s;
+}
+
+button[type="submit"]:hover::before {
+  left: 100%;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 87, 34, 0.3);
+}
+
+button[type="submit"]:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.auth-toggle {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(234, 234, 234, 0.6);
+  animation: fadeIn 0.8s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-toggle::before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2153/2153788.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.auth-toggle p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.auth-toggle button {
+  background: none;
+  border: none;
+  color: #F44336;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.auth-toggle button:hover {
+  background-color: rgba(255, 87, 34, 0.1);
+  transform: translateY(-2px);
+}
+
+.error-message {
+  background-color: rgba(254, 226, 226, 0.9);
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  border-left: 4px solid #dc2626;
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.1);
+}
+
+/* Animations */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .auth-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+  
+  .login-form h2, .signup-form h2 {
+    font-size: 1.8rem;
+  }
+} 

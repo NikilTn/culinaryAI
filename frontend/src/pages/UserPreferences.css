@@ -1,0 +1,144 @@
+.preferences-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.preferences-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.preferences-content {
+  margin-top: 20px;
+}
+
+.preferences-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.preferences-section h2 {
+  font-size: 22px;
+  color: #4a6da7;
+  margin-bottom: 15px;
+  font-weight: 600;
+  padding-left: 10px;
+  border-left: 4px solid #4a6da7;
+}
+
+.preference-item {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 16px;
+  padding-left: 15px;
+}
+
+.preference-item strong {
+  font-weight: 600;
+  margin-right: 5px;
+  color: #444;
+}
+
+.preference-item.notes {
+  white-space: pre-line;
+  background-color: #f5f7fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #ddd;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-style: italic;
+  color: #666;
+  font-size: 18px;
+}
+
+.error-message {
+  color: #d9534f;
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: #f8d7da;
+  border-radius: 6px;
+  border-left: 4px solid #d9534f;
+}
+
+.no-preferences {
+  text-align: center;
+  padding: 40px;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.no-preferences p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.questionnaire-link, .edit-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #4a6da7;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(74, 109, 167, 0.2);
+}
+
+.questionnaire-link:hover, .edit-button:hover {
+  background-color: #3a5a8f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 109, 167, 0.3);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.edit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-button svg {
+  margin-right: 8px;
+}
+
+@media (max-width: 600px) {
+  .preferences-container {
+    padding: 20px;
+    margin: 15px;
+  }
+  
+  .preferences-section {
+    margin-bottom: 20px;
+  }
+  
+  .preferences-container h1 {
+    font-size: 24px;
+  }
+  
+  .preferences-section h2 {
+    font-size: 20px;
+  }
+} 

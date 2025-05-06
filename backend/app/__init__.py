@@ -1,0 +1,3 @@
+"""
+CulinaryAI Application Package
+""" 

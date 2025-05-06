@@ -1,0 +1,38 @@
+fastapi==0.103.1
+uvicorn==0.23.2
+sqlalchemy==2.0.20
+alembic==1.12.0
+psycopg2-binary==2.9.7
+pydantic==2.3.0
+pydantic-core==2.6.3
+python-dotenv==1.0.0
+python-jose==3.3.0
+passlib==1.7.4
+python-multipart==0.0.6
+starlette==0.27.0
+openai==0.28.0
+requests==2.31.0
+httpx==0.27.0
+python-dateutil==2.8.2
+typing_extensions==4.10.0
+certifi==2024.2.2
+urllib3==2.0.7
+idna==3.6
+email_validator==2.2.0
+numpy==1.24.3
+bcrypt==4.0.1           # used by passlib for bcrypt hashing
+python-socketio==5.11.4 # if you ever add Socket.IO endpoints
+anyio==3.7.1            # async I/O abstraction (underpins Starlette/FastAPI)
+asgiref==3.7.2          # ASGI reference implementation (Starlette dependency)
+h11==0.14.0             # HTTP/1.1 library (used by Uvicorn)
+httpcore==1.0.4         # core HTTP client (lower-level for httpx)
+sniffio==1.3.1          # detects async library in use (trio vs asyncio)
+yarl==1.9.4             # URL library (used by aiohttp/httpcore)
+wsproto==1.2.0          # WebSocket protocol implementation
+webencodings==0.5.1     # text encoding helpers (WebSocket/wsproto dependency)
+scikit-learn==1.2.0
+pandas==2.1.2                 # for tabular data manipulation
+scipy==1.11.3                 # numerical routines & sparse matrices
+nltk==3.8.1                   # tokenization, stop-word removal, text preprocessing
+joblib==1.3.2                 # model serialization & parallel computation
+sentence-transformers==2.2.2
