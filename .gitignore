@@ -62,7 +62,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
-.cursorrules
 
 # Keep deployment files
 !app.yaml 
